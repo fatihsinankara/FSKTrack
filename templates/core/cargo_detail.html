@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ cargo.carrier_name }} - Takip No: {{ cargo.tracking_number }}</h2>
+    
+    {% if error %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+    {% endif %}
+    
+    {% if cargo_data %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Durum: {{ cargo_data.status }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Takip Numarası: {{ cargo_data.tracking_number }}</h6>
+            </div>
+        </div>
+
+        <h4>Hareketler</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>İl</th>
+                        <th>Birim</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for hareket in cargo_data.movements %}
+                        <tr>
+                            <td>{{ hareket.tarih }}</td>
+                            <td>{{ hareket.il }}</td>
+                            <td>{{ hareket.birim }}</td>
+                            <td>{{ hareket.islem }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4" class="text-center">Hareket bulunamadı.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+    
+    <div class="mt-3">
+        <a href="{% url 'cargo_list' %}" class="btn btn-secondary">Geri Dön</a>
+    </div>
+</div>
+{% endblock %}

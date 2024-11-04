@@ -1,0 +1,22 @@
+CARGO_TRACKING_URLS = {
+    "PTT Kargo": "https://gonderitakip.ptt.gov.tr/Track/Verify?q={tracking_no}",
+    "Yurtiçi Kargo": "https://selfservis.yurticikargo.com/reports/SSWDocumentDetail.aspx?DocId={tracking_no}",
+    "Sürat Kargo": "https://www.suratkargo.com.tr/KargoTakip/?kargotakipno={tracking_no}",
+    "Aras Kargo": "http://kargotakip.araskargo.com.tr/mainpage.aspx?code={tracking_no}",
+    "MNG Kargo": "https://kargotakip.mngkargo.com.tr/?takipNo={tracking_no}",
+    "UPS Kargo": "https://www.ups.com.tr/WaybillSorgu.aspx?Waybill={tracking_no}",
+    "DHL": "https://www.dhl.com.tr/exp-tr/express/tracking.html?AWB={tracking_no}&brand=DHL",
+    "TNT": "https://www.tnt.com/express/tr_tr/site/shipping-tools/tracking.html?searchType=CON&cons={tracking_no}",
+    "Trendyol Express": "https://kargotakip.trendyol.com/?orderNumber={tracking_no}",
+    "Hepsijet": "https://www.hepsijet.com/gonderi-takibi/{tracking_no}",
+    "Jetteslim": "https://jetteslim.net/kargom-nerede?tracking_code={tracking_no}",
+    "FedEx": "https://www.fedex.com/apps/fedextrack/index.html?tracknumbers={tracking_no}&cntry_code=tr",
+    "Inter Global Cargo": "https://www.globalkargo.com/tr/KargoDetay/{tracking_no}",
+    "Fast Express": "https://www.fast-express.com/tr/action/tracking/{tracking_no}",
+    "Kargoist": "http://kargotakip.kargoist.com/hareket.asp?har_kod={tracking_no}&tip=2",
+    "UKGS": "https://host1.selectoptimus.com:2070/PublishedPages/QueryBookingStatus.aspx?tenantCode=UKGS&bookingNo={tracking_no}",
+    "Git Kargo": "https://takip.gitkargo.com/kargo-takip?tracking_number={tracking_no}",
+    "KargoTürk Kargo": "http://online.kargoturk.com.tr:88/hareket.asp?har_kod={tracking_no}",
+    "Ekol Logistics (ShipsGo üzerinden)": "https://shipsgo.com/live-map-container-tracking?query={tracking_no}",
+    "IGC - Inter Global Cargo (Sipariş Numarası ile)": "http://www.globalkargo.com/tr/KargoDetay/{tracking_no}"
+}

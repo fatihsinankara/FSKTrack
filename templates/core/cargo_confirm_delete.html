@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% block content %}
+    <h2>Kargo Sil</h2>
+    <p>Bu kargo kaydını silmek istediğinizden emin misiniz?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Sil</button>
+        <a href="{% url 'cargo_list' %}" class="btn btn-secondary">İptal</a>
+    </form>
+{% endblock %}
